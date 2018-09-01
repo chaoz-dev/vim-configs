@@ -60,7 +60,7 @@ endfunction
 :let mapleader = " "
 
 " Shortcuts for escape.
-noremap! kj <Esc>
+noremap! lj <Esc>
 
 " Shortcuts to clear search.
 nnoremap <leader><leader> :noh<CR>:redraw<CR>
@@ -71,8 +71,8 @@ nnoremap <C-c> :q<CR>
 " Shortcuts for buffer navigation.
 nnoremap <Tab> :bn<CR>:redraw<CR>:ls<CR>
 nnoremap <S-Tab> :bn<CR>:redraw<CR>:ls<CR>
-nnoremap kd :bd<CR>
-nnoremap kf :update<CR>
+nnoremap ld :bd<CR>
+nnoremap lf :update<CR>
 
 """ Vim Plugins.
 call plug#begin('~/.local/share/nvim/plugins')
@@ -172,22 +172,8 @@ let g:ycm_complete_in_comments = 1
 " Disable YCM confirmation on vim initialization.
 let g:ycm_confirm_extra_conf = 0
 
-" File types for which YCM should trigger.
-let g:ycm_filetype_whitelist = {
-    \   'c'     : 1,
-    \   'cc'    : 1,
-    \   'cpp'   : 1,
-    \   'h'     : 1,
-    \   'hh'    : 1,
-    \   'hpp'   : 1
-    \}
-let g:ycm_filetype_specific_completion_to_disable = {
-    \   'gitcommit' : 1,
-    \   'txt'       : 1
-    \}
-
 " Number of auto-complete candidates.
-let g:ycm_max_num_candidates = 20
+let g:ycm_max_num_candidates = 10
 let g:ycm_min_num_identifier_candidate_chars = 2
 
 " Display symbols.
