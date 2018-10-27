@@ -24,6 +24,10 @@ set colorcolumn=120
 " Refresh buffers that haven't been modified.
 set autoread
 
+" Save edit history between sessions.
+set undofile
+set undodir=$HOME/.cache/.vim_undo
+
 " Use X Window clipboard to copy across vim sessions.
 set clipboard=unnamedplus
 
