@@ -110,11 +110,10 @@ Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 """ Vim-GitGutter Settings.
-nnoremap <leader><leader>gg <plug>GitGutter
-nnoremap <leader><leader>ga <Plug>GitGutterPrevHunk
-nnoremap <leader><leader>gs <Plug>GitGutterNextHunk
-nnoremap <leader><leader>gd <Plug>GitGutterUndoHunk
-nnoremap <leader><leader>gf <Plug>GitGutterStageHunk
+nmap <leader>gk <Plug>GitGutterPrevHunk
+nmap <leader>gj <Plug>GitGutterNextHunk
+nmap <leader>gd <Plug>GitGutterUndoHunk
+nmap <leader>gf <Plug>GitGutterStageHunk
 
 """ Vim-Rooter Settings.
 " Disable echoing project directory.
