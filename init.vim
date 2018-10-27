@@ -102,6 +102,7 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'unblevable/quick-scope'
 Plug 'Valloric/ListToggle'
@@ -110,6 +111,7 @@ Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 """ Vim-GitGutter Settings.
+" Shortcuts.
 nmap <leader>gk <Plug>GitGutterPrevHunk
 nmap <leader>gj <Plug>GitGutterNextHunk
 nmap <leader>gd <Plug>GitGutterUndoHunk
@@ -171,6 +173,32 @@ augroup autoformat
     " autocmd FileType java AutoFormatBuffer google-java-format
     autocmd FileType python AutoFormatBuffer autopep8
 augroup END
+
+""" NERD Commenter Settings.
+" Allow commenting and inverting of empty lines (useful when commenting code).
+let g:NERDCommentEmptyLines = 1
+
+" Disable all default mappings.
+let g:NERDCreateDefaultMappings = 0
+
+" Disable uncommenting of lines with alternative commenting styles.
+let g:NERDRemoveAltComs = 0
+
+" Add spaces after comment delimiters by default.
+let g:NERDSpaceDelims = 1
+
+" Enable trimming of trailing whitespace when uncommenting.
+let g:NERDTrimTrailingWhitespace = 1
+
+" Use compact syntax for prettified multi-line comments.
+let g:NERDCompactSexyComs = 1
+
+" Enable NERDCommenterToggle to check if all selected lines are commented or not.
+let g:NERDToggleCheckAllLines = 1
+
+" Shortcuts.
+nmap <leader>/ <plug>NERDCommenterToggle
+vmap <leader>/ <plug>NERDCommenterToggle
 
 """ ListToggle Settings.
 let g:lt_location_list_toggle_map = '<leader><leader>ll'
