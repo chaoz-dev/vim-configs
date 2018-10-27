@@ -28,12 +28,20 @@ set autoread
 set clipboard=unnamedplus
 
 " Enable spell checking.
-set spell spelllang=en_us
-highlight clear SpellBad
-highlight SpellBad cterm=bold,reverse
-highlight clear SpellCap
-highlight clear SpellRare
-highlight clear SpellLocal
+function! ToggleSpellCheck()
+    set spell! spelllang=en_us
+    highlight clear SpellBad
+    highlight SpellBad cterm=bold,reverse
+    highlight clear SpellCap
+    highlight clear SpellRare
+    highlight clear SpellLocal
+
+    if &spell
+        echo "Spell Check ON"
+    else
+        echo "Spell Check OFF"
+    endif
+endfunction
 
 " Enable 256 colors in vim.
 set t_Co=256
@@ -60,6 +68,7 @@ endfunction
 :let mapleader = " "
 
 " Shortcuts for escape.
+inoremap jj <Esc>
 noremap! lj <Esc>
 
 " Shortcuts to clear search.
@@ -73,6 +82,9 @@ nnoremap <Tab> :bn<CR>:redraw<CR>:ls<CR>
 nnoremap <S-Tab> :bn<CR>:redraw<CR>:ls<CR>
 nnoremap ld :bd<CR>
 nnoremap lf :update<CR>
+
+" Toggle Spell Check
+nnoremap <leader><leader>s :call ToggleSpellCheck()<CR>
 
 """ Vim Plugins.
 call plug#begin('~/.local/share/nvim/plugins')
