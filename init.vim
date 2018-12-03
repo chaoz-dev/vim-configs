@@ -84,8 +84,8 @@ nnoremap <leader><leader> :noh<CR>:redraw<CR>
 nnoremap <C-c> :q<CR>
 
 " Shortcuts for buffer navigation.
-nnoremap <Tab> :bn<CR>:redraw<CR>:ls<CR>
-nnoremap <S-Tab> :bn<CR>:redraw<CR>:ls<CR>
+nnoremap <Tab> :bn<CR>:redraw<CR>
+nnoremap <S-Tab> :bn<CR>:redraw<CR>
 nnoremap ld :bd<CR>
 nnoremap lf :update<CR>
 
