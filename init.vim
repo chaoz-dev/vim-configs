@@ -113,6 +113,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'unblevable/quick-scope'
 Plug 'Valloric/ListToggle'
 Plug 'Valloric/YouCompleteMe'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
@@ -226,3 +227,6 @@ let g:ycm_min_num_identifier_candidate_chars = 2
 " Display symbols.
 let g:ycm_error_symbol = '!'
 let g:ycm_warning_symbol = '?'
+
+""" Vim Airline.
+let g:airline#extensions#tabline#enabled = 1
