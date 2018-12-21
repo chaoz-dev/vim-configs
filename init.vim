@@ -212,7 +212,7 @@ let g:lt_location_list_toggle_map = '<leader><leader>ll'
 
 """ YCM Settings.
 " YCM server python interpreter.
-let g:ycm_server_python_interpreter = '/usr/bin/python2'
+let g:ycm_server_python_interpreter = '/usr/bin/python3'
 
 " Enable auto-completion in comments.
 let g:ycm_complete_in_comments = 1
