@@ -19,7 +19,7 @@ set softtabstop=4
 set shiftwidth=4
 
 " Mark text boundary.
-set colorcolumn=120
+set colorcolumn=80
 
 " Refresh buffers that haven't been modified.
 set autoread
