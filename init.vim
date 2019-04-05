@@ -75,7 +75,6 @@ endfunction
 
 " Shortcuts for escape.
 inoremap jj <Esc>
-noremap! lj <Esc>
 
 " Shortcuts to clear search.
 nnoremap <leader><leader> :noh<CR>:redraw<CR>
@@ -86,8 +85,8 @@ nnoremap <C-c> :q<CR>
 " Shortcuts for buffer navigation.
 nnoremap <Tab> :bn<CR>:redraw<CR>
 nnoremap <S-Tab> :bp<CR>:redraw<CR>
-nnoremap ld :bd<CR>
-nnoremap lf :update<CR>
+nnoremap <leader>d :bd<CR>
+nnoremap <leader>w :update<CR>
 
 " Toggle Spell Check
 nnoremap <leader><leader>s :call ToggleSpellCheck()<CR>
@@ -110,8 +109,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
-Plug 'unblevable/quick-scope'
-Plug 'Valloric/ListToggle'
 Plug 'Valloric/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 
@@ -122,7 +119,7 @@ call plug#end()
 nmap <leader>gk <Plug>GitGutterPrevHunk
 nmap <leader>gj <Plug>GitGutterNextHunk
 nmap <leader>gd <Plug>GitGutterUndoHunk
-nmap <leader>gf <Plug>GitGutterStageHunk
+nmap <leader>gw <Plug>GitGutterStageHunk
 
 """ Vim-Rooter Settings.
 " Disable echoing project directory.
@@ -138,11 +135,11 @@ map <leader> <plug>(easymotion-prefix)
 " Remap search (2 characters) to single key.
 nmap s <plug>(easymotion-s2)
 
-" Remap bidirectional searches.
-nmap <leader>w <plug>(easymotion-bd-w)
-nmap <leader>W <plug>(easymotion-bd-W)
-nmap <leader>e <plug>(easymotion-bd-e)
-nmap <leader>E <plug>(easymotion-bd-E)
+" Remap character/word searches.
+nmap f <plug>(easymotion-bd-f)
+nmap t <plug>(easymotion-bd-t)
+nmap w <plug>(easymotion-bd-w)
+nmap e <plug>(easymotion-bd-e)
 
 " Search smartcase.
 let g:EasyMotion_smartcase = 1
@@ -206,9 +203,6 @@ let g:NERDToggleCheckAllLines = 1
 " Shortcuts.
 nmap <leader>/ <plug>NERDCommenterToggle
 vmap <leader>/ <plug>NERDCommenterToggle
-
-""" ListToggle Settings.
-let g:lt_location_list_toggle_map = '<leader><leader>ll'
 
 """ YCM Settings.
 " YCM server python interpreter.
