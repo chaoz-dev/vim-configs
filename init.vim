@@ -136,9 +136,9 @@ map <leader> <plug>(easymotion-prefix)
 nmap s <plug>(easymotion-s2)
 
 " Remap character/word searches.
-nmap f <plug>(easymotion-fl)
+nmap f <plug>(easymotion-bd-fl)
 nmap F <plug>(easymotion-bd-f)
-nmap t <plug>(easymotion-tl)
+nmap t <plug>(easymotion-bd-tl)
 nmap T <plug>(easymotion-bd-t)
 nmap w <plug>(easymotion-wl)
 nmap W <plug>(easymotion-bd-w)
