@@ -136,10 +136,16 @@ map <leader> <plug>(easymotion-prefix)
 nmap s <plug>(easymotion-s2)
 
 " Remap character/word searches.
-nmap f <plug>(easymotion-bd-f)
-nmap t <plug>(easymotion-bd-t)
-nmap w <plug>(easymotion-bd-w)
-nmap e <plug>(easymotion-bd-e)
+nmap f <plug>(easymotion-fl)
+nmap F <plug>(easymotion-bd-f)
+nmap t <plug>(easymotion-tl)
+nmap T <plug>(easymotion-bd-t)
+nmap w <plug>(easymotion-wl)
+nmap W <plug>(easymotion-bd-w)
+nmap b <plug>(easymotion-bl)
+nmap B <plug>(easymotion-bd-b)
+nmap e <plug>(easymotion-el)
+nmap E <plug>(easymotion-bd-e)
 
 " Search smartcase.
 let g:EasyMotion_smartcase = 1
@@ -203,6 +209,10 @@ let g:NERDToggleCheckAllLines = 1
 " Shortcuts.
 nmap <leader>/ <plug>NERDCommenterToggle
 vmap <leader>/ <plug>NERDCommenterToggle
+
+""" Vim-Fugitive Settings.
+" Shortcuts.
+nnoremap <leader>g :Gblame<CR>
 
 """ YCM Settings.
 " YCM server python interpreter.
