@@ -109,6 +109,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
+Plug 'unblevable/quick-scope'
 Plug 'Valloric/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 
@@ -136,16 +137,11 @@ map <leader> <plug>(easymotion-prefix)
 nmap s <plug>(easymotion-s2)
 
 " Remap character/word searches.
-nmap f <plug>(easymotion-bd-fl)
-nmap F <plug>(easymotion-bd-f)
-nmap t <plug>(easymotion-bd-tl)
-nmap T <plug>(easymotion-bd-t)
-nmap w <plug>(easymotion-wl)
-nmap W <plug>(easymotion-bd-w)
-nmap b <plug>(easymotion-bl)
-nmap B <plug>(easymotion-bd-b)
-nmap e <plug>(easymotion-el)
-nmap E <plug>(easymotion-bd-e)
+nmap F <plug>(easymotion-bd-fl)
+nmap T <plug>(easymotion-bd-tl)
+nmap W <plug>(easymotion-wl)
+nmap E <plug>(easymotion-el)
+nmap B <plug>(easymotion-bl)
 
 " Search smartcase.
 let g:EasyMotion_smartcase = 1
@@ -212,7 +208,7 @@ vmap <leader>/ <plug>NERDCommenterToggle
 
 """ Vim-Fugitive Settings.
 " Shortcuts.
-nnoremap <leader>g :Gblame<CR>
+nnoremap <leader><leader>g :Gblame<CR>
 
 """ YCM Settings.
 " YCM server python interpreter.
