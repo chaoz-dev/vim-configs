@@ -1,4 +1,6 @@
 # init.vim
-Place into `~/.config/nvim/`.
+Configurations for NeoVim.
 
-Run `:PlugInstall` from within neovim.
+1. Install Vundle (see https://github.com/VundleVim/Vundle.vim for installation instructions).
+2. Place configurations into `~/.config/nvim/`.
+3. Run `:PlugInstall` from within neovim.
