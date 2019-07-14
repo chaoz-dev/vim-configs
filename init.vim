@@ -97,6 +97,7 @@ call plug#begin('~/.local/share/nvim/plugins')
 Plug 'airblade/vim-gitgutter'
 Plug 'airblade/vim-rooter'
 Plug 'bronson/vim-trailing-whitespace'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'easymotion/vim-easymotion'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
@@ -137,8 +138,8 @@ map <leader> <plug>(easymotion-prefix)
 nmap s <plug>(easymotion-s2)
 
 " Remap character/word searches.
-nmap F <plug>(easymotion-bd-fl)
-nmap T <plug>(easymotion-bd-tl)
+nmap f <plug>(easymotion-bd-fl)
+nmap t <plug>(easymotion-bd-tl)
 nmap W <plug>(easymotion-wl)
 nmap E <plug>(easymotion-el)
 nmap B <plug>(easymotion-bl)
