@@ -83,7 +83,7 @@ endfunction
 :let mapleader = " "
 
 " Shortcuts for escape.
-inoremap jj <Esc>
+inoremap ii <Esc>
 
 " Shortcuts to clear search.
 nnoremap <leader><leader> :noh<CR>:redraw<CR>
