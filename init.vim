@@ -129,10 +129,10 @@ call plug#end()
 
 """ Vim-GitGutter Settings.
 " Shortcuts.
-nmap <leader>gk <Plug>(GitGutterPrevHunk)
-nmap <leader>gj <Plug>(GitGutterNextHunk)
-nmap <leader>gd <Plug>(GitGutterUndoHunk)
-nmap <leader>gw <Plug>(GitGutterStageHunk)
+nmap gk <Plug>(GitGutterPrevHunk)
+nmap gj <Plug>(GitGutterNextHunk)
+nmap gu <Plug>(GitGutterUndoHunk)
+nmap gs <Plug>(GitGutterStageHunk)
 
 """ Vim-Rooter Settings.
 " Disable echoing project directory.
