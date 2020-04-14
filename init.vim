@@ -84,6 +84,8 @@ endfunction
 
 " Shortcuts for escape.
 inoremap ii <Esc>
+inoremap jj <Esc>
+inoremap <leader><leader> <Esc>
 
 " Shortcuts to clear search.
 nnoremap <leader><leader> :noh<CR>:redraw<CR>
