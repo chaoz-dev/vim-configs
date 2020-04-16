@@ -85,7 +85,6 @@ endfunction
 " Shortcuts for escape.
 inoremap ii <Esc>
 inoremap jj <Esc>
-inoremap <leader><leader> <Esc>
 
 " Shortcuts to clear search.
 nnoremap <leader><leader> :noh<CR>:redraw<CR>
@@ -97,7 +96,7 @@ nnoremap <C-c> :q<CR>
 nnoremap <Tab> :bn<CR>:redraw<CR>
 nnoremap <S-Tab> :bp<CR>:redraw<CR>
 nnoremap <leader>d :bd<CR>
-nnoremap <leader>s :update<CR>
+nnoremap <leader>w :update<CR>
 
 " Toggle Spell Check
 nnoremap <leader><leader>s :call ToggleSpellCheck()<CR>
