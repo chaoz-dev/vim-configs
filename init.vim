@@ -119,6 +119,7 @@ Plug 'haya14busa/incsearch.vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'unblevable/quick-scope'
@@ -217,9 +218,13 @@ let g:NERDToggleCheckAllLines = 1
 nmap <leader>/ <plug>NERDCommenterToggle
 vmap <leader>/ <plug>NERDCommenterToggle
 
+""" NerdTree
+" Shortcuts.
+map <leader>n :NERDTreeToggle<CR>
+
 """ Vim-Fugitive Settings.
 " Shortcuts.
-nnoremap <leader><leader>g :Gblame<CR>
+nnoremap <leader>g :Gblame<CR>
 
 " Vim-Airline Settings
 set laststatus=2
@@ -238,6 +243,10 @@ let g:ctrlp_custom_ignore ='\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend|so)$|(^|[/\\])\
 " Ignore files in .gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
+" Shortcuts.
+let g:ctrlp_map = '<C-m>'
+let g:ctrlp_cmd = 'CtrlPMRU'
+
 " Use X Window clipboard to copy across vim sessions
 set clipboard=unnamedplus
 vmap <silent> ,y y:new<CR>:call setline(1,getregtype())<CR>o<Esc>P:wq! ~/.cache/vim_clipboard.txt<CR>
@@ -250,9 +259,6 @@ map <silent> ,P :sview ~/.cache/vim_clipboard.txt<CR>"zdddG:q!<CR>:call setreg('
 
 " Refresh current buffer and redraw.
 nnoremap <F5> :GitGutter<CR> :redraw!<CR>
-
-" Search for file.
-nnoremap <F9> :CtrlP<CR>
 
 function FloatUp()
     while line(".") > 1
