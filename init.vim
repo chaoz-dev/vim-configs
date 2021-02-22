@@ -87,7 +87,7 @@ inoremap ii <Esc>
 inoremap jj <Esc>
 
 " Shortcuts to clear search.
-nnoremap <leader><leader> :noh<CR>:redraw<CR>
+nnoremap <leader><leader><leader> :noh<CR>:redraw<CR>
 
 " Shortcuts for quitting vim (only if no modifications have been made).
 nnoremap <C-c> :q<CR>
@@ -225,7 +225,7 @@ map <leader>n :NERDTreeToggle<CR>
 
 """ Vim-Fugitive Settings.
 " Shortcuts.
-nnoremap <leader>g :Gblame<CR>
+nnoremap <leader><leader>g :Gblame<CR>
 
 """ Vim-Airline Settings
 set laststatus=2
