@@ -101,6 +101,26 @@ nnoremap <leader>w :update<CR>
 " Toggle Spell Check
 nnoremap <leader><leader>s :call ToggleSpellCheck()<CR>
 
+""" Vim Templates.
+if has("autocmd")
+  augroup templates
+    autocmd BufNewFile *.h 0r ~/.config/nvim/templates/template.hh
+    autocmd BufNewFile *.hh 0r ~/.config/nvim/templates/template.hh
+    autocmd BufNewFile *.hpp 0r ~/.config/nvim/templates/template.hh
+    autocmd BufNewFile *.c 0r ~/.config/nvim/templates/template.hh
+    autocmd BufNewFile *.cc 0r ~/.config/nvim/templates/template.hh
+    autocmd BufNewFile *.cpp 0r ~/.config/nvim/templates/template.hh
+
+    autocmd BufNewFile *.hil 0r ~/.config/nvim/templates/template.hil
+
+    autocmd BufNewFile *.proto 0r ~/.config/nvim/templates/template.proto
+
+    autocmd BufNewFile *.stack 0r ~/.config/nvim/templates/template.stack
+
+    autocmd BufNewFile BUILD 0r ~/.config/nvim/templates/template.bzl
+  augroup END
+endif
+
 """ Vim Plugins.
 call plug#begin('~/.local/share/nvim/plugins')
 
