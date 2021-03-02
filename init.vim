@@ -225,7 +225,7 @@ map <leader>n :NERDTreeToggle<CR>
 
 """ Vim-Fugitive Settings.
 " Shortcuts.
-nnoremap <leader><leader>g :Gblame<CR>
+nnoremap <leader><leader>g :Git blame<CR>
 
 """ Vim-Airline Settings
 set laststatus=2
