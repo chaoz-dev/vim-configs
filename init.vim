@@ -213,8 +213,8 @@ let g:NERDCompactSexyComs = 1
 let g:NERDToggleCheckAllLines = 1
 
 " Shortcuts.
-nmap <leader>/ <plug>NERDCommenterToggle
-vmap <leader>/ <plug>NERDCommenterToggle
+nmap // <plug>NERDCommenterToggle
+vmap // <plug>NERDCommenterToggle
 
 """ FZF
 nmap <C-m> :History<CR>
