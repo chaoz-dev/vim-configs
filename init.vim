@@ -39,22 +39,6 @@ set undoreload=10000
 " Use X Window clipboard to copy across vim sessions.
 set clipboard=unnamedplus
 
-" Enable spell checking.
-function! ToggleSpellCheck()
-    set spell! spelllang=en_us
-    highlight clear SpellBad
-    highlight SpellBad cterm=bold,reverse
-    highlight clear SpellCap
-    highlight clear SpellRare
-    highlight clear SpellLocal
-
-    if &spell
-        echo "Spell Check ON"
-    else
-        echo "Spell Check OFF"
-    endif
-endfunction
-
 " Enable 256 colors in vim.
 set t_Co=256
 
@@ -98,8 +82,26 @@ nnoremap <S-Tab> :bp<CR>:redraw<CR>
 nnoremap <leader>d :bd<CR>
 nnoremap <leader>w :update<CR>
 
-" Toggle Spell Check
+" Shortcuts for windows and tabs.
+nnoremap + <C-W>_<C-W><Bar>
+
+" Toggle spellcheck.
 nnoremap <leader><leader>s :call ToggleSpellCheck()<CR>
+
+function! ToggleSpellCheck()
+    set spell! spelllang=en_us
+    highlight clear SpellBad
+    highlight SpellBad cterm=bold,reverse
+    highlight clear SpellCap
+    highlight clear SpellRare
+    highlight clear SpellLocal
+
+    if &spell
+        echo "Spell Check ON"
+    else
+        echo "Spell Check OFF"
+    endif
+endfunction
 
 """ Vim Templates.
 if has("autocmd")
@@ -233,8 +235,8 @@ let g:NERDCompactSexyComs = 1
 let g:NERDToggleCheckAllLines = 1
 
 " Shortcuts.
-nmap <leader>/ <plug>NERDCommenterToggle
-vmap <leader>/ <plug>NERDCommenterToggle
+nmap // <plug>NERDCommenterToggle
+vmap // <plug>NERDCommenterToggle
 
 """ FZF
 nmap <C-m> :History<CR>
