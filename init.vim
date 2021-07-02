@@ -80,7 +80,7 @@ nnoremap <C-c> :q<CR>
 nnoremap <Tab> :bn<CR>:redraw<CR>
 nnoremap <S-Tab> :bp<CR>:redraw<CR>
 nnoremap <leader>d :bd<CR>
-nnoremap <leader>w :update<CR>
+nnoremap <leader>w :FixWhitespace<CR>:update<CR>
 
 " Shortcuts for windows and tabs.
 nnoremap + <C-W>_<C-W><Bar>
@@ -158,9 +158,6 @@ nmap gs <Plug>(GitGutterStageHunk)
 """ Vim-Rooter Settings.
 " Disable echoing project directory.
 let g:rooter_silent_chdir = 1
-
-""" Vim-Trailing-Whitespace Settings.
-nnoremap <leader><leader>w :FixWhitespace<CR>:update<CR>
 
 """ Vim-EasyMotion Settings.
 " Remap trigger to single leader.
