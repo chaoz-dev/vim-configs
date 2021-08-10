@@ -81,6 +81,7 @@ nnoremap <Tab> :bn<CR>:redraw<CR>
 nnoremap <S-Tab> :bp<CR>:redraw<CR>
 nnoremap <leader>d :bd<CR>
 nnoremap <leader>w :FixWhitespace<CR>:update<CR>
+nnoremap <leader><leader>w :update<CR>
 
 " Shortcuts for windows and tabs.
 nnoremap + <C-W>_<C-W><Bar>
