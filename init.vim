@@ -143,7 +143,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'lfv89/vim-interestingwords'
 Plug 'preservim/nerdtree'
 Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive', {'tag': 'v3.3'}
 Plug 'unblevable/quick-scope'
 Plug 'vim-airline/vim-airline'
 
@@ -208,7 +208,7 @@ augroup autoformat
     " autocmd FileType gn AutoFormatBuffer gn
     " autocmd FileType html,css,json AutoFormatBuffer js-beautify
     " autocmd FileType java AutoFormatBuffer google-java-format
-    autocmd FileType python AutoFormatBuffer autopep8
+    " autocmd FileType python AutoFormatBuffer autopep8
 augroup END
 
 """ NERD Commenter Settings.
