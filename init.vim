@@ -143,7 +143,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'lfv89/vim-interestingwords'
 Plug 'preservim/nerdtree'
 Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-fugitive', {'tag': 'v3.3'}
+Plug 'tpope/vim-fugitive'
 Plug 'unblevable/quick-scope'
 Plug 'vim-airline/vim-airline'
 
