@@ -75,11 +75,15 @@ nmap J <plug>(easymotion-j)
 
 """ Context Specific NVim Settings """
 
-if is_vscode " VSCode NVim.
+if is_vscode
+    """ VSCode NVim """
+
     """ VSCode Shortcuts """
     nnoremap <leader>w <Cmd>call VSCodeCall('workbench.action.files.save')<CR>
 
-else " Vanilla NVim.
+else
+    """ Vanilla NVim """
+
     """ General Settings """
     " Tab and indent settings.
     set autoindent
