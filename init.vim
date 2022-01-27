@@ -13,9 +13,9 @@ set timeoutlen=1000
 let mapleader = " "
 
 " Shortcuts to clear search.
-nnoremap <leader>h :noh<CR>
+nnoremap H :noh<CR> :call UncolorAllWords()<CR>
 
-""" Vim-Plug """
+""" Vim Plug """
 
 " VSCode flag.
 let is_vscode = exists('g:vscode')
@@ -49,7 +49,7 @@ Plug 'vim-airline/vim-airline', Cond(!is_vscode)
 
 call plug#end()
 
-""" (asvetliakov, easymotion) Vim-EasyMotion Settings
+""" (asvetliakov, easymotion) Vim EasyMotion Settings
 " Ignore case when searching for match.
 let g:EasyMotion_smartcase = 1
 
@@ -145,14 +145,14 @@ else
 
     """ Vim Plugins """
 
-    """ (airblade) Vim-GitGutter Settings
+    """ (airblade) Vim GitGutter Settings
     " Shortcuts.
     nmap gk <Plug>(GitGutterPrevHunk)
     nmap gj <Plug>(GitGutterNextHunk)
     nmap gu <Plug>(GitGutterUndoHunk)
     nmap gs <Plug>(GitGutterStageHunk)
 
-    """ (easymotion) Vim-EasyMotion Settings
+    """ (easymotion) Vim EasyMotion Settings
     " Enable fuzzy search.
     " Integrated with:
     "  - haya14busa/incsearch.vim
@@ -169,7 +169,7 @@ else
       \ }), get(a:, 1, {}))
     endfunction
 
-    """ (google) Vim-Glaive Settings
+    """ (google) Vim Glaive Settings
     " Need following line for installing plugin.
     call glaive#Install()
 
@@ -188,6 +188,10 @@ else
 
     """ (junegunn) FZF Settings
     nmap <C-m> :History<CR>
+
+    """ (lfv89) Vim Interesting Words Settings
+    nnoremap * :call InterestingWords('n')<CR>
+    vnoremap * :call InterestingWords('v')<CR>
 
     """ (scrooloose) NERD Commenter Settings
     " Allow commenting and inverting of empty lines (useful when commenting code).
@@ -215,11 +219,11 @@ else
     nmap // <plug>NERDCommenterToggle
     vmap // <plug>NERDCommenterToggle
 
-    """ (tpope) Vim-Fugitive Settings
+    """ (tpope) Vim Fugitive Settings
     " Shortcuts.
     nnoremap <leader>g :Git blame<CR>
 
-    """ (vim-airline) Vim-Airline settings
+    """ (vim-airline) Vim Airline settings
     set laststatus=2
     let g:airline#extensions#tabline#enabled = 1
     let g:airline_theme = 'dark'
