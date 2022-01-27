@@ -12,9 +12,6 @@ set timeoutlen=1000
 " Set the <leader> key.
 let mapleader = " "
 
-" Shortcuts to clear search.
-nnoremap H :noh<CR> :call UncolorAllWords()<CR>
-
 """ Vim Plug """
 
 " VSCode flag.
@@ -78,7 +75,12 @@ nmap J <plug>(easymotion-j)
 if is_vscode
     """ VSCode NVim """
 
-    """ VSCode Shortcuts """
+    """ Keyboard Shortcuts """
+
+    " Clear highlights.
+    nnoremap H :noh<CR> :call UncolorAllWords()<CR>
+
+    " Save file.
     nnoremap <leader>w <Cmd>call VSCodeCall('workbench.action.files.save')<CR>
 
 else
@@ -115,6 +117,9 @@ else
     """ Keyboard Shortcuts """
     " Shortcuts for escape.
     inoremap jj <Esc>
+
+    " Shortcuts to clear search.
+    nnoremap H :noh<CR> :call UncolorAllWords()<CR>
 
     " Shortcuts for quitting vim (only if no modifications have been made).
     nnoremap <C-c> :q<CR>
