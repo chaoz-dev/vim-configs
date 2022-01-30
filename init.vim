@@ -1,5 +1,4 @@
 """ General Settings """
-
 " Undo history.
 set undofile
 set undodir=$HOME/.cache/nvim/undo
@@ -8,12 +7,10 @@ set undodir=$HOME/.cache/nvim/undo
 set timeoutlen=1000
 
 """ Keyboard Shortcuts """
-
 " Set the <leader> key.
 let mapleader = " "
 
 """ Vim Plug """
-
 " VSCode flag.
 let is_vscode = exists('g:vscode')
 function! Cond(cond, ...)
@@ -71,14 +68,12 @@ nmap K <plug>(easymotion-k)
 nmap J <plug>(easymotion-j)
 
 """ Context Specific NVim Settings """
-
 if is_vscode
     """ VSCode NVim """
 
     """ Keyboard Shortcuts """
-
     " Clear highlights.
-    nnoremap H :noh<CR> :call UncolorAllWords()<CR>
+    nnoremap H :noh<CR>
 
     " Save file.
     nnoremap <leader>w <Cmd>call VSCodeCall('workbench.action.files.save')<CR>
@@ -119,17 +114,17 @@ else
     inoremap jj <Esc>
 
     " Shortcuts to clear search.
-    nnoremap H :noh<CR> :call UncolorAllWords()<CR>
+    nnoremap H :noh<CR>:call UncolorAllWords()<CR>
 
     " Shortcuts for quitting vim (only if no modifications have been made).
     nnoremap <C-c> :q<CR>
 
     " Shortcuts for buffer navigation.
-    nnoremap <Tab> :bn<CR>:redraw<CR>
-    nnoremap <S-Tab> :bp<CR>:redraw<CR>
+    nnoremap <Tab> :bn<CR>:redraw<CR>:GitGutter<CR>
+    nnoremap <S-Tab> :bp<CR>:redraw<CR>:GitGutter<CR>
     nnoremap <leader>d :bd<CR>
-    nnoremap <leader>w :FixWhitespace<CR>:update<CR>
-    nnoremap <leader><leader>w :update<CR>
+    nnoremap <leader>w :FixWhitespace<CR>:update<CR>:GitGutter<CR>
+    nnoremap <leader><leader>w :update<CR>:GitGutter<CR>
 
     " Toggle spellcheck.
     nnoremap <leader>s :call ToggleSpellCheck()<CR>
