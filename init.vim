@@ -187,7 +187,8 @@ else
     augroup END
 
     """ (junegunn) FZF Settings
-    nmap <C-m> :History<CR>
+    nnoremap <C-m> :History<CR>
+    nnoremap // :Ag<CR>
 
     """ (lfv89) Vim Interesting Words Settings
     nnoremap * :call InterestingWords('n')<CR>
@@ -216,8 +217,8 @@ else
     let g:NERDToggleCheckAllLines = 1
 
     " Shortcuts.
-    nmap // <plug>NERDCommenterToggle
-    vmap // <plug>NERDCommenterToggle
+    nmap <C-_> <plug>NERDCommenterToggle
+    vmap <C-_> <plug>NERDCommenterToggle
 
     """ (tpope) Vim Fugitive Settings
     " Shortcuts.
