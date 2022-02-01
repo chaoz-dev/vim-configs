@@ -32,7 +32,6 @@ Plug 'google/vim-codefmt', Cond(!is_vscode)
 Plug 'google/vim-glaive', Cond(!is_vscode)
 Plug 'google/vim-maktaba', Cond(!is_vscode)
 Plug 'haya14busa/incsearch.vim', Cond(!is_vscode)
-Plug 'haya14busa/incsearch-easymotion.vim', Cond(!is_vscode)
 Plug 'haya14busa/incsearch-fuzzy.vim', Cond(!is_vscode)
 Plug 'junegunn/fzf', Cond(!is_vscode, { 'do' : { -> fzf#install() } })
 Plug 'junegunn/fzf.vim', Cond(!is_vscode)
@@ -156,16 +155,14 @@ else
     " Enable fuzzy search.
     " Integrated with:
     "  - haya14busa/incsearch.vim
-    "  - haya14busa/incsearch-easymotion.vim
     "  - haya14busa/incsearch-fuzzy.vim
-    nnoremap <silent><expr> / incsearch#go(<SID>config_easyfuzzymotion())
-    function! s:config_easyfuzzymotion(...) abort
+    nnoremap <silent><expr> / incsearch#go(<SID>config_fuzzyall())
+    function! s:config_fuzzyall(...) abort
       return extend(copy({
-      \   'converters': [incsearch#config#fuzzyword#converter()],
-      \   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
-      \   'keymap': {"\<CR>": '<Over>(easymotion)'},
-      \   'is_expr': 0,
-      \   'is_stay': 1
+      \   'converters': [
+      \     incsearch#config#fuzzy#converter(),
+      \     incsearch#config#fuzzyspell#converter()
+      \   ],
       \ }), get(a:, 1, {}))
     endfunction
 
