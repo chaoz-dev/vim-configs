@@ -77,6 +77,9 @@ if is_vscode
     " Save file.
     nnoremap <leader>w <Cmd>call VSCodeCall('workbench.action.files.save')<CR>
 
+    " Close file.
+    nnoremap <leader>d <Cmd>call VSCodeCall('workbench.action.closeActiveEditor')<CR>
+
 else
     """ Vanilla NVim """
 
