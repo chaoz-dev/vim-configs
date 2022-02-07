@@ -62,7 +62,6 @@ nmap T <plug>(easymotion-bd-t)
 nmap W <plug>(easymotion-bd-wl)
 nmap E <plug>(easymotion-bd-el)
 nmap B <plug>(easymotion-bl)
-nmap N <plug>(easymotion-bd-n)
 nmap K <plug>(easymotion-k)
 nmap J <plug>(easymotion-j)
 
