@@ -10,6 +10,9 @@ set timeoutlen=1000
 " Set the <leader> key.
 let mapleader = " "
 
+" Clear highlights.
+nnoremap U :noh<CR>
+
 """ Vim Plug """
 " VSCode flag.
 let is_vscode = exists('g:vscode')
@@ -35,7 +38,6 @@ Plug 'haya14busa/incsearch.vim', Cond(!is_vscode)
 Plug 'haya14busa/incsearch-fuzzy.vim', Cond(!is_vscode)
 Plug 'junegunn/fzf', Cond(!is_vscode, { 'do' : { -> fzf#install() } })
 Plug 'junegunn/fzf.vim', Cond(!is_vscode)
-Plug 'lfv89/vim-interestingwords', Cond(!is_vscode)
 Plug 'scrooloose/nerdcommenter', Cond(!is_vscode)
 Plug 'tpope/vim-fugitive', Cond(!is_vscode)
 Plug 'vim-airline/vim-airline', Cond(!is_vscode)
@@ -70,9 +72,6 @@ if is_vscode
     """ VSCode NVim """
 
     """ Keyboard Shortcuts """
-    " Clear highlights.
-    nnoremap H :noh<CR>
-
     " Save file.
     nnoremap <leader>w <Cmd>call VSCodeCall('workbench.action.files.save')<CR>
 
@@ -113,9 +112,6 @@ else
     """ Keyboard Shortcuts """
     " Shortcuts for escape.
     inoremap jj <Esc>
-
-    " Shortcuts to clear search.
-    nnoremap H :noh<CR>:call UncolorAllWords()<CR>
 
     " Shortcuts for quitting vim (only if no modifications have been made).
     nnoremap <C-c> :q<CR>
@@ -188,10 +184,6 @@ else
     """ (junegunn) FZF Settings
     nnoremap <C-m> :History<CR>
     nnoremap // :Ag<CR>
-
-    """ (lfv89) Vim Interesting Words Settings
-    nnoremap * :call InterestingWords('n')<CR>
-    vnoremap * :call InterestingWords('v')<CR>
 
     """ (scrooloose) NERD Commenter Settings
     " Allow commenting and inverting of empty lines (useful when commenting code).
