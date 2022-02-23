@@ -10,6 +10,9 @@ set timeoutlen=1000
 " Set the <leader> key.
 let mapleader = " "
 
+" Shortcuts for escape.
+inoremap <C-i> <Esc>
+
 " Clear highlights.
 nnoremap <CR> :noh<CR><CR>
 
@@ -114,9 +117,6 @@ else
     set autoread
 
     """ Keyboard Shortcuts """
-    " Shortcuts for escape.
-    inoremap jj <Esc>
-
     " Shortcuts for quitting vim (only if no modifications have been made).
     nnoremap <C-c> :q<CR>
 
@@ -128,7 +128,7 @@ else
     nnoremap <leader><leader>w :update<CR>:GitGutter<CR>
 
     " Toggle spellcheck.
-    nnoremap <leader>s :call ToggleSpellCheck()<CR>
+    nnoremap <leader>c :call ToggleSpellCheck()<CR>
     function! ToggleSpellCheck()
         set spell! spelllang=en_us
         highlight clear SpellBad
