@@ -120,6 +120,10 @@ else
     " Shortcuts for quitting vim (only if no modifications have been made).
     nnoremap <C-c> :q<CR>
 
+    " Open file anywhere in line.
+    nnoremap gf ^f/gf
+    nnoremap <leader>f gf
+
     " Shortcuts for buffer navigation.
     nnoremap <Tab> :bn<CR>:redraw<CR>:GitGutter<CR>
     nnoremap <S-Tab> :bp<CR>:redraw<CR>:GitGutter<CR>
@@ -147,11 +151,15 @@ else
     """ Vim Plugins """
 
     """ (airblade) Vim GitGutter Settings
+    " Sign column colors.
+    let g:gitgutter_set_sign_backgrounds = 1
+
     " Shortcuts.
-    nmap gk <Plug>(GitGutterPrevHunk)
-    nmap gj <Plug>(GitGutterNextHunk)
-    nmap gu <Plug>(GitGutterUndoHunk)
-    nmap gs <Plug>(GitGutterStageHunk)
+    nnoremap <leader>k :GitGutterPrevHunk<CR>
+    nnoremap <leader>j :GitGutterNextHunk<CR>
+    nnoremap <leader>u :GitGutterUndoHunk<CR>
+    nnoremap <leader>s :GitGutterStageHunk<CR>
+    nnoremap <leader>g :GitGutterFold<CR>
 
     """ (easymotion) Vim EasyMotion Settings
     " Enable fuzzy search.
@@ -217,7 +225,7 @@ else
 
     """ (tpope) Vim Fugitive Settings
     " Shortcuts.
-    nnoremap <leader>g :Git blame<CR>
+    nnoremap <leader>b :Git blame<CR>
 
     """ (vim-airline) Vim Airline settings
     set laststatus=2
