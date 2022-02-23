@@ -11,7 +11,11 @@ set timeoutlen=1000
 let mapleader = " "
 
 " Clear highlights.
-nnoremap U :noh<CR>
+nnoremap <CR> :noh<CR><CR>
+
+" Remap redo.
+map <C-r> <Nop>
+nnoremap U :redo<CR>
 
 """ Vim Plug """
 " VSCode flag.
@@ -182,7 +186,7 @@ else
     augroup END
 
     """ (junegunn) FZF Settings
-    nnoremap <C-m> :History<CR>
+    nnoremap M :History<CR>
     nnoremap // :Ag<CR>
 
     """ (scrooloose) NERD Commenter Settings
