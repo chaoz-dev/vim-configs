@@ -11,6 +11,7 @@ set timeoutlen=1000
 let mapleader = " "
 
 " Shortcuts for escape.
+inoremap jj <Esc>
 inoremap ii <Esc>
 
 " Clear highlights.
