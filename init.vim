@@ -11,14 +11,10 @@ set timeoutlen=1000
 let mapleader = " "
 
 " Shortcuts for escape.
-inoremap <C-i> <Esc>
+inoremap ii <Esc>
 
 " Clear highlights.
 nnoremap <CR> :noh<CR><CR>
-
-" Remap redo.
-map <C-r> <Nop>
-nnoremap U :redo<CR>
 
 """ Vim Plug """
 " VSCode flag.
