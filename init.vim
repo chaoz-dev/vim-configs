@@ -35,6 +35,7 @@ Plug 'asvetliakov/vim-easymotion', Cond(is_vscode, { 'as': 'vsc-easymotion' })
 
 " Vanilla NVim.
 Plug 'airblade/vim-gitgutter', Cond(!is_vscode)
+Plug 'airblade/vim-rooter', Cond(!is_vscode)
 Plug 'bronson/vim-trailing-whitespace', Cond(!is_vscode)
 Plug 'christoomey/vim-tmux-navigator', Cond(!is_vscode)
 Plug 'easymotion/vim-easymotion', Cond(!is_vscode)
@@ -161,6 +162,10 @@ else
     nnoremap <leader>s :GitGutterStageHunk<CR>
     nnoremap <leader>g :GitGutterFold<CR>
 
+    """ (airblade) Vim Rooter Settings
+    " Stop Rooter from echoing the project directory.
+    let g:rooter_silent_chdir = 1
+
     """ (easymotion) Vim EasyMotion Settings
     " Enable fuzzy search.
     " Integrated with:
@@ -194,7 +199,8 @@ else
     augroup END
 
     """ (junegunn) FZF Settings
-    nnoremap M :History<CR>
+    nnoremap <leader>o :execute 'Files '.FindRootDirectory()<CR>
+    nnoremap <leader>m :History<CR>
     nnoremap // :Ag<CR>
 
     """ (scrooloose) NERD Commenter Settings
