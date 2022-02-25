@@ -127,6 +127,9 @@ else
     " Shortcuts for quitting vim (only if no modifications have been made).
     nnoremap <C-c> :q<CR>
 
+    " Toggle line numbers.
+    nnoremap <leader>n :set nu!<CR>:set rnu!<CR>
+
     " Open file anywhere in line.
     nnoremap gf ^f/gf
     nnoremap <leader>f gf
