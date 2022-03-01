@@ -6,6 +6,9 @@ set undodir=$HOME/.cache/nvim/undo
 " Timeout length.
 set timeoutlen=1000
 
+" Copy across nvim sessions by using the system clipboard.
+set clipboard^=unnamed,unnamedplus
+
 """ Keyboard Shortcuts """
 " Set the <leader> key.
 let mapleader = " "
