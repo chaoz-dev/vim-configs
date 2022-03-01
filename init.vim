@@ -39,8 +39,6 @@ Plug 'easymotion/vim-easymotion', Cond(!is_vscode)
 Plug 'google/vim-codefmt', Cond(!is_vscode)
 Plug 'google/vim-glaive', Cond(!is_vscode)
 Plug 'google/vim-maktaba', Cond(!is_vscode)
-Plug 'haya14busa/incsearch.vim', Cond(!is_vscode)
-Plug 'haya14busa/incsearch-fuzzy.vim', Cond(!is_vscode)
 Plug 'junegunn/fzf', Cond(!is_vscode, { 'do' : { -> fzf#install() } })
 Plug 'junegunn/fzf.vim', Cond(!is_vscode)
 Plug 'scrooloose/nerdcommenter', Cond(!is_vscode)
@@ -174,21 +172,6 @@ else
     """ (airblade) Vim Rooter Settings
     " Stop Rooter from echoing the project directory.
     let g:rooter_silent_chdir = 1
-
-    """ (easymotion) Vim EasyMotion Settings
-    " Enable fuzzy search.
-    " Integrated with:
-    "  - haya14busa/incsearch.vim
-    "  - haya14busa/incsearch-fuzzy.vim
-    nnoremap <silent><expr> / incsearch#go(<SID>config_fuzzyall())
-    function! s:config_fuzzyall(...) abort
-      return extend(copy({
-      \   'converters': [
-      \     incsearch#config#fuzzy#converter(),
-      \     incsearch#config#fuzzyspell#converter()
-      \   ],
-      \ }), get(a:, 1, {}))
-    endfunction
 
     """ (google) Vim Glaive Settings
     " Need following line for installing plugin.
