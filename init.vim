@@ -196,7 +196,7 @@ else
     """ (junegunn) FZF Settings
     nnoremap <leader>o :execute 'Files '.FindRootDirectory()<CR>
     nnoremap <leader>m :History<CR>
-    nnoremap // :Ag<CR>
+    nnoremap <C-_> :Ag<CR>
 
     """ (scrooloose) NERD Commenter Settings
     " Allow commenting and inverting of empty lines (useful when commenting code).
@@ -221,8 +221,8 @@ else
     let g:NERDToggleCheckAllLines = 1
 
     " Shortcuts.
-    nmap <C-_> <plug>NERDCommenterToggle
-    vmap <C-_> <plug>NERDCommenterToggle
+    nmap // <plug>NERDCommenterToggle
+    vmap // <plug>NERDCommenterToggle
 
     """ (tpope) Vim Fugitive Settings
     " Shortcuts.
