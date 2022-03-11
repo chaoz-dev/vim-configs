@@ -18,7 +18,7 @@ inoremap jj <Esc>
 inoremap ii <Esc>
 
 " Clear highlights.
-nnoremap <CR> :noh<CR><CR>
+nnoremap <leader><leader><leader> :noh<CR><CR>
 
 """ Vim Plug """
 " VSCode flag.
