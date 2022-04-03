@@ -170,7 +170,6 @@ else
     nnoremap <leader>j :GitGutterNextHunk<CR>
     nnoremap <leader>u :GitGutterUndoHunk<CR>
     nnoremap <leader>s :GitGutterStageHunk<CR>
-    nnoremap <leader>g :GitGutterFold<CR>
 
     """ (airblade) Vim Rooter Settings
     " Stop Rooter from echoing the project directory.
@@ -226,7 +225,7 @@ else
 
     """ (tpope) Vim Fugitive Settings
     " Shortcuts.
-    nnoremap <leader>b :Git blame<CR>
+    nnoremap <leader>g :Git blame<CR>
 
     """ (vim-airline) Vim Airline settings
     set laststatus=2
