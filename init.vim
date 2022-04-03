@@ -194,8 +194,8 @@ else
     augroup END
 
     """ (junegunn) FZF Settings
-    nnoremap <leader>o :execute 'Files '.FindRootDirectory()<CR>
-    nnoremap <leader>m :History<CR>
+    nnoremap <C-o> :execute 'Files '.FindRootDirectory()<CR>
+    nnoremap <C-m> :History<CR>
     nnoremap <C-_> :Ag<CR>
 
     """ (scrooloose) NERD Commenter Settings
