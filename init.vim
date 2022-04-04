@@ -15,7 +15,6 @@ let mapleader = " "
 
 " Shortcuts for escape.
 inoremap jj <Esc>
-inoremap ii <Esc>
 
 " Clear highlights.
 nnoremap <leader><leader><leader> :noh<CR><CR>
