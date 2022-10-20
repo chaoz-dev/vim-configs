@@ -19,6 +19,10 @@ inoremap jj <Esc>
 " Clear highlights.
 nnoremap <leader><leader><leader> :noh<CR><CR>
 
+" Reselect visual selection after indenting.
+vnoremap < <gv
+vnoremap > >gv
+
 """ Vim Plug """
 " VSCode flag.
 let is_vscode = exists('g:vscode')
