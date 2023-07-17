@@ -199,8 +199,8 @@ else
         autocmd FileType python AutoFormatBuffer autopep8
         " Alternative: autocmd FileType python AutoFormatBuffer yapf
         autocmd FileType rust AutoFormatBuffer rustfmt
-        autocmd FileType vue AutoFormatBuffer prettier
         autocmd FileType swift AutoFormatBuffer swift-format
+        autocmd FileType vue AutoFormatBuffer prettier
     augroup END
 
     """ (junegunn) FZF Settings
