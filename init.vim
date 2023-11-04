@@ -175,6 +175,9 @@ else
     nnoremap <leader>s :GitGutterStageHunk<CR>
 
     """ (airblade) Vim Rooter Settings
+    " Help Rooter identify root directories.
+    let g:rooter_patterns = ['.git', '.gitattributes', 'WORKSPACE']
+
     " Stop Rooter from echoing the project directory.
     let g:rooter_silent_chdir = 1
 
