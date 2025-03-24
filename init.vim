@@ -1,4 +1,6 @@
 """ General Settings """
+colorscheme vim
+
 " Undo history.
 set undofile
 set undodir=$HOME/.cache/nvim/undo
