@@ -144,8 +144,8 @@ else
     nnoremap <Tab> :bn<CR>:redraw<CR>:GitGutter<CR>
     nnoremap <S-Tab> :bp<CR>:redraw<CR>:GitGutter<CR>
     nnoremap <leader>d :bd<CR>
-    nnoremap <leader>w :FixWhitespace<CR>:update<CR>:GitGutter<CR>
-    nnoremap <leader><leader>w :update<CR>:GitGutter<CR>
+    nnoremap <leader>w :FixWhitespace<CR>:silent update<CR>:GitGutter<CR>
+    nnoremap <leader><leader>w :silent update<CR>:GitGutter<CR>
 
     " Toggle spellcheck.
     nnoremap <leader>c :call ToggleSpellCheck()<CR>
