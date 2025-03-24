@@ -138,7 +138,7 @@ else
 
     " Open file anywhere in line.
     nnoremap gf ^f/gf
-    nnoremap <leader>f gf
+    nnoremap <leader>f :vert wincmd f<CR>
 
     " Shortcuts for buffer navigation.
     nnoremap <Tab> :bn<CR>:redraw<CR>:GitGutter<CR>
