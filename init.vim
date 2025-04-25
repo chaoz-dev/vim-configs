@@ -1,4 +1,5 @@
 """ General Settings """
+colorscheme vim
 
 " Undo history.
 set undofile
